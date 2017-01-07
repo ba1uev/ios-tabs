@@ -49,7 +49,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="31"/>
+            <point key="canvasLocation" x="-276" y="610"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3Jd-jH-3S5">
+            <objects>
+                <navigationController id="9TA-di-xui" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="djj-tP-lYY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RY3-Mb-5OV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K0j-Gh-BCz" kind="relationship" relationship="rootViewController" id="cvG-os-fRt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyJ-8T-uNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="-199"/>
         </scene>
         <!--Houses View Controller-->
         <scene sceneID="jZK-Td-JuL">
@@ -60,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="A8N-Wd-ylg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="House" rowHeight="94" id="A8N-Wd-ylg" customClass="HouseCell" customModule="app_4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A8N-Wd-ylg" id="ulR-Bc-b6O">
@@ -68,11 +85,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOt-jB-cxp">
-                                            <rect key="frame" x="22" y="4" width="107" height="84"/>
+                                            <rect key="frame" x="23" y="3" width="107" height="84"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-nJ-tc7">
+                                            <rect key="frame" x="152" y="3" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="housePicture" destination="mOt-jB-cxp" id="mvJ-U7-ehH"/>
+                                    <outlet property="houseText" destination="7Jt-nJ-tc7" id="fVx-xn-9QV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -81,10 +109,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Tna-WZ-eIW"/>
+                    <navigationItem key="navigationItem" id="hmD-xI-oDk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jds-9I-iya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400.80000000000001" y="-611.24437781109452"/>
+            <point key="canvasLocation" x="535" y="610"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -140,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.80000000000001" y="120.98950524737631"/>
+            <point key="canvasLocation" x="-1098" y="609"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -155,7 +184,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="K0j-Gh-BCz" kind="relationship" relationship="viewControllers" id="FjM-N2-NyP"/>
+                        <segue destination="9TA-di-xui" kind="relationship" relationship="viewControllers" id="h52-rq-hwY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
